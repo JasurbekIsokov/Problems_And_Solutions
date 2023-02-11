@@ -328,33 +328,158 @@
 
 // Issue 15:
 
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+
+// let maxNumber1;
+// let maxNumber2;
+
+// if (a < b && a < c) {
+//   maxNumber1 = b;
+//   maxNumber2 = c;
+// } else if (b < a && b < c) {
+//   maxNumber1 = a;
+//   maxNumber2 = c;
+// } else if (c < a && c < b) {
+//   maxNumber1 = a;
+//   maxNumber2 = b;
+// } else if (b === a && a < c) {
+//   maxNumber1 = c;
+//   maxNumber2 = b;
+// } else if (b === c && c < a) {
+//   maxNumber1 = a;
+//   maxNumber2 = b;
+// } else if (c === a && a < b) {
+//   maxNumber1 = a;
+//   maxNumber2 = b;
+// } else {
+//   maxNumber1 = "3 ta son ham teng";
+// }
+
+// console.log(maxNumber1, maxNumber2);
+
+// // --------------------------------------------------
+
+// // Issue 16:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+
+// if (a < b && b < c) {
+//   a *= 2;
+//   b *= 2;
+//   c *= 2;
+// } else {
+//   a *= -1;
+//   b *= -1;
+//   c *= -1;
+// }
+
+// console.log(a, b, c);
+
+// --------------------------------------------------
+
+// Issue 17:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+
+// if ((a < b && b < c) || (a > b && b > c)) {
+//   a *= 2;
+//   b *= 2;
+//   c *= 2;
+// } else {
+//   a *= -1;
+//   b *= -1;
+//   c *= -1;
+// }
+
+// console.log(a, b, c);
+
+// // --------------------------------------------------
+
+// // Issue 18:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+
+// let indexNumber;
+
+// if (a === b && a !== c) {
+//   indexNumber = 3;
+// } else if (a === c && a !== b) {
+//   indexNumber = 2;
+// } else if (b === c && a !== c) {
+//   indexNumber = 1;
+// } else if (a === b && b === c) {
+//   indexNumber = "kiritilgan sonlaring 3 tasi ham teng";
+// } else {
+//   indexNumber = "kiritilgan sonlaring 2 tasi teng emas ";
+// }
+
+// --------------------------------------------------
+
+// Issue 19:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+// let d = Number(prompt("d="));
+
+// let indexNumber;
+
+// if (a === b && b === c && a !== d) {
+//   indexNumber = 4;
+// } else if (a === b && b === d && a !== c) {
+//   indexNumber = 3;
+// } else if (a === c && a === d && a !== b) {
+//   indexNumber = 2;
+// } else if (b === c && b === d && b !== a) {
+//   indexNumber = 1;
+// } else if (a === b && a === c && a === d) {
+//   indexNumber = "kiritilgan sonlaring 4 tasi ham teng";
+// } else {
+//   indexNumber = "kiritilgan sonlaring 3 tasi teng emas ";
+// }
+
+// console.log(indexNumber);
+
+// --------------------------------------------------
+
+// Issue 20:
+
 let a = Number(prompt("a="));
 let b = Number(prompt("b="));
 let c = Number(prompt("c="));
 
-let maxNumber1;
-let maxNumber2;
+let minDistancePoint;
+let minDistance;
 
-if (a < b && a < c) {
-  maxNumber1 = b;
-  maxNumber2 = c;
-} else if (b < a && b < c) {
-  maxNumber1 = a;
-  maxNumber2 = c;
-} else if (c < a && c < b) {
-  maxNumber1 = a;
-  maxNumber2 = b;
-} else if (b === a && a < c) {
-  maxNumber1 = c;
-  maxNumber2 = b;
-} else if (b === c && c < a) {
-  maxNumber1 = a;
-  maxNumber2 = b;
-} else if (c === a && a < b) {
-  maxNumber1 = a;
-  maxNumber2 = b;
-} else {
-  maxNumber1 = "3 ta son ham teng";
+let aMinusB = a - b;
+let aMinusC = a - c;
+
+if (aMinusB < 0) {
+  aMinusB *= -1;
 }
 
-console.log(maxNumber1, maxNumber2);
+if (aMinusC < 0) {
+  aMinusC *= -1;
+}
+
+if (aMinusB < aMinusC) {
+  minDistancePoint = b;
+  minDistance = a - b;
+} else if (aMinusB > aMinusC) {
+  minDistancePoint = c;
+  minDistance = a - c;
+}
+
+if (minDistance < 0) {
+  minDistance *= -1;
+}
+
+console.log(minDistancePoint, minDistance);
