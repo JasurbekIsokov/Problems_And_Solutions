@@ -206,4 +206,155 @@
 // console.log(`a = ${(a = sumNum)}; b = ${(b = sumNum)}`);
 // console.log(a, b);
 
+// // --------------------------------------------------
+
+// // Issue 11:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+
+// if (a !== b) {
+//   if (a < b) a = b;
+//   else b = a;
+// } else {
+//   a = 0;
+//   b = 0;
+// }
+
+// console.log(a, b);
+
+// // --------------------------------------------------
+
+// // // Issue 12:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+
+// let minNumber;
+
+// if (a < b && a < c) {
+//   minNumber = a;
+// } else if (b < a && b < c) {
+//   minNumber = b;
+// } else if (c < a && c < b) {
+//   minNumber = c;
+// } else if (b === a && a < c) {
+//   minNumber = a;
+// } else if (b === c && c < a) {
+//   minNumber = c;
+// } else if (c === a && a < b) {
+//   minNumber = a;
+// } else {
+//   minNumber = "3 ta son ham teng";
+// }
+
+// console.log(minNumber);
+
 // --------------------------------------------------
+
+// Issue 13:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+
+// let midleNumber;
+
+// if (a > b && a < c) {
+//   midleNumber = a;
+// } else if (a < b && a > c) {
+//   midleNumber = a;
+// } else if (b > a && b < c) {
+//   midleNumber = b;
+// } else if (b < a && b > c) {
+//   midleNumber = b;
+// } else if (c > a && c < b) {
+//   midleNumber = c;
+// } else if (c < a && c > b) {
+//   midleNumber = c;
+// } else {
+//   midleNumber = "kiritilgan sonlarning kamida 2 tasi teng";
+// }
+
+// console.log(midleNumber);
+
+// --------------------------------------------------
+
+// Issue 14:
+
+// let a = Number(prompt("a="));
+// let b = Number(prompt("b="));
+// let c = Number(prompt("c="));
+
+// let minNumber;
+// let maxNumber;
+
+// if (a < b && b < c) {
+//   minNumber = a;
+//   maxNumber = c;
+// } else if (b < a && a < c) {
+//   minNumber = b;
+//   maxNumber = c;
+// } else if (c < a && a < b) {
+//   minNumber = c;
+//   maxNumber = b;
+// } else if (a < c && c < b) {
+//   minNumber = a;
+//   maxNumber = b;
+// } else if (b < c && c < a) {
+//   minNumber = b;
+//   maxNumber = a;
+// } else if (c < b && b < a) {
+//   minNumber = c;
+//   maxNumber = a;
+// } else if (a > b && b == c) {
+//   minNumber = b;
+//   maxNumber = a;
+// } else if (b > a && a == c) {
+//   minNumber = a;
+//   maxNumber = b;
+// } else if (c < a && a == b) {
+//   minNumber = b;
+//   maxNumber = c;
+// } else {
+//   maxNumber = a;
+//   minNumber = a;
+// }
+
+// console.log(minNumber, maxNumber);
+
+// --------------------------------------------------
+
+// Issue 15:
+
+let a = Number(prompt("a="));
+let b = Number(prompt("b="));
+let c = Number(prompt("c="));
+
+let maxNumber1;
+let maxNumber2;
+
+if (a < b && a < c) {
+  maxNumber1 = b;
+  maxNumber2 = c;
+} else if (b < a && b < c) {
+  maxNumber1 = a;
+  maxNumber2 = c;
+} else if (c < a && c < b) {
+  maxNumber1 = a;
+  maxNumber2 = b;
+} else if (b === a && a < c) {
+  maxNumber1 = c;
+  maxNumber2 = b;
+} else if (b === c && c < a) {
+  maxNumber1 = a;
+  maxNumber2 = b;
+} else if (c === a && a < b) {
+  maxNumber1 = a;
+  maxNumber2 = b;
+} else {
+  maxNumber1 = "3 ta son ham teng";
+}
+
+console.log(maxNumber1, maxNumber2);
